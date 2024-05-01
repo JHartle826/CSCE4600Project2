@@ -1,4 +1,4 @@
-Custom Shell
+Project 2: Custom Shell Implementation in Go 
 
 This is a simple custom shell implemented in Go. It provides a command-line interface where users can execute built-in commands and external commands.
 
