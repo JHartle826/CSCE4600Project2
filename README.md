@@ -1,37 +1,30 @@
-# Project 2: Shell Builtins
+Custom Shell
+This is a simple custom shell implemented in Go. It provides a command-line interface where users can execute built-in commands and external commands.
 
-## Description
+Functionality
+The shell supports the following built-in commands:
 
-For this project we'll be adding commands to a simple shell. 
+cd: Change directory.
+env: Print environment variables.
+exit: Exit the shell.
+echo: Print arguments to the standard output.
+pwd: Print the current working directory.
+mkdir: Create directories.
+rmdir: Remove directories.
+touch: Create files.
+External commands are executed as subprocesses.
 
-The shell is already written, but you will choose five (5) shell builtins (or shell-adjacent) commands to rewrite into Go, and integrate into the Go shell.
+How to Execute/Test
+To execute the shell:
 
-There are many builtins or shell-adjacent commands to pick from: 
-[Bourne Shell Builtins](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html), 
-[Bash Builtins](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html,), and 
-[Built-in csh and tcsh Commands](https://docstore.mik.ua/orelly/linux/lnut/ch08_09.htm).
+Clone this repository to your local machine.
+Ensure you have Go installed.
+Build the project:
+go build main.go
 
-Feel free to pick from `sh`, `bash`, `csh`, `tcsh`, `ksh` or `zsh` builtins... or if you have something else in mind, ping me and we'll work it out.
+Run the executable:
+./main
 
-As an example, two shell builtins have already been added to the package builtins:
+Once the shell is running, you can type commands and press Enter to execute them. You can test built-in commands like cd, env, echo, etc., as well as external commands available in your system.
 
-- `cd`
-- `env`
-
-## Steps
-
-1. Clone down the example input/output and skeleton `main.go`:
-
-    `git clone https://github.com/jh125486/CSCE4600`
- 
-2. Copy the `Project2` files to your own git project.
-
-    1. In your `go.mod`, replace "jh125486" in the module line with your GitHub name, e.g.:
-
-      - "module github.com/jh125486/CSCE4600" changes to "module github.com/CoolStudent123/CSCE4600"
-  
-    2. In the `main.go`, replace "jh125486" in the imports with your package path, e.g.:
-
-      - "github.com/jh125486/CSCE4600/Project2/builtins" changes to "github.com/CoolStudent123/CSCE4600/Project2/builtins"
-
-3. Start editing the `main.go` command switch (lines 57-64) and the package `builtins` with your chosen commands.
+To exit the shell, simply type exit and press Enter.
