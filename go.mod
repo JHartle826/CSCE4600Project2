@@ -1,4 +1,4 @@
-module github.com/JHartle826/CSCE4600
+module github.com/JHartle826/CSCE4600Project2
 
 go 1.19
 
