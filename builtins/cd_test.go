@@ -2,7 +2,7 @@ package builtins_test
 
 import (
 	"errors"
-	"github.com/jh125486/CSCE4600/Project2/builtins"
+	"github.com/JHartle826/CSCE4600Project2/builtins"
 	"os"
 	"testing"
 )
