@@ -11,7 +11,7 @@ import (
     "os/user"
     "strings"
 
-    "github.com/jah0766/CSCE4600/Project2/builtins"
+    "github.com/JHartle826/CSCE4600Project2/builtins"
 )
 
 func main() {
