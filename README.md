@@ -1,10 +1,26 @@
 Project 2: Custom Shell Implementation in Go 
 
-This is a simple custom shell implemented in Go. It provides a command-line interface where users can execute built-in commands and external commands.
+This custom shell is built in Go and provides a command-line interface similar to traditional Unix shells like Bash. It allows users to execute both built-in commands (handled internally by the shell) and external commands (executed as subprocesses)
 
-Functionality
+There are five main components of the shell. They include:
 
-The shell supports the following built-in commands:
+Initialization:
+The main function initializes the shell by creating a channel for graceful exit.
+
+The Main Loop:
+The runLoop function continuously reads input from the user, prints the prompt, and handles user input until an exit signal is received.
+
+Input Handling:
+User input is processed by the handleInput function, which identifies the command name and arguments.
+
+Command Execution:
+If the command is a built-in command, it is handled internally. Otherwise, it is executed as an external command using the executeCommand function.
+
+Output Display:
+The output of the command (if any) is displayed to the user.
+	
+ 
+ There are multiple unique commands. Including:
 
 cd: Change directory.
 
@@ -22,24 +38,4 @@ rmdir: Remove directories.
 
 touch: Create files.
 
-External commands are executed as subprocesses.
-
-How to Execute/Test
-
-To execute the shell:
-
-Clone this repository to your local machine.
-
-Ensure you have Go installed.
-
-Build the project:
-
-go build main.go
-
-Run the executable:
-
-./main
-
-Once the shell is running, you can type commands and press Enter to execute them. You can test built-in commands like cd, env, echo, etc., as well as external commands available in your system.
-
-To exit the shell, simply type exit and press Enter.
+To build the program, execute the command “go build main.go” followed by “./main”. Once there you will be prompted to enter commands. To exit the shell, type exit and press Enter.
